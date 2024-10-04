@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUNJABI Songs</title>
+    <link rel="icon" type="image/x-icon" href="favicon1.ico">
+    <style>
+        body {
+            font-family: 'Georgia', serif; /* Classic and elegant serif font */
+            background: linear-gradient(135deg, rgba(164, 183, 240, 0.8) 25%, rgba(209, 181, 128, 0.8) 100%), 
+                        url('https://www.transparenttextures.com/patterns/cubes.png'); /* Soft blue to cream gradient with subtle texture */
+            background-size: cover;
+            background-blend-mode: overlay; /* Combine gradient with texture */
+            margin: 0;
+            padding-top: 75px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            animation: background-animation 15s ease infinite; /* Smooth background animation */
+        }
+    
+        @keyframes background-animation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    
+        h1 {
+            color: #3c6478; /* Deep English blue */
+            text-shadow: 3px 3px rgba(0, 0, 0, 0.15);
+            font-family: 'Playfair Display', serif; /* Elegant serif font */
+            font-size: 3.8rem;
+            letter-spacing: 1px;
+        }
+    
+        .audio-player {
+            background: #faf3e0; /* Soft cream */
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            width: 320px;
+            position: relative;
+            text-align: left;
+            margin-bottom: 40px;
+            border: 3px solid #3c6478; /* English blue border */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+    
+        .audio-player img {
+            width: 100%;
+            border-radius: 15px;
+            margin-bottom: 15px;
+        }
+    
+        .audio-player h2 {
+            font-size: 22px;
+            margin: 10px 0;
+            color: #4a6055; /* Gentle greenish-brown */
+            font-family: 'Merriweather', serif; /* Refined serif font */
+            font-weight: bold;
+        }
+    
+        .audio-player p {
+            color: #7f8c8d; /* Muted gray */
+            font-size: 16px;
+            font-family: 'Courier New', monospace; /* Classic monospace font */
+        }
+    
+        .audio-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+        }
+    
+        .audio-controls audio {
+            width: 100%;
+        }
+    
+        .pi-theme {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+    
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(108, 122, 137, 0.5); /* Muted blue-gray circles */
+            animation: float 10s infinite ease-in-out;
+        }
+    
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-25px); }
+            100% { transform: translateY(0); }
+        }
+    
+        audio {
+            width: 340px;
+            height: 50px;
+            border-radius: 30px;
+            border: 3px solid #8e44ad; /* Soft purple border */
+            background-color: #ecf0f1; /* Light gray background */
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+            padding: 8px;
+        }
+    
+        audio::-webkit-media-controls-panel {
+            background-color: #7f8c8d; /* Muted gray panel */
+            border-radius: 25px;
+            padding: 10px;
+        }
+    
+        audio::-webkit-media-controls-play-button,
+        audio::-webkit-media-controls-pause-button {
+            background-color: #3498db; /* Bright blue buttons */
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+        }
+    
+        audio::-webkit-media-controls-timeline {
+            background-color: #2c3e50; /* Dark navy timeline */
+            border-radius: 20px;
+        }
+    
+        audio::-webkit-media-controls-current-time-display,
+        audio::-webkit-media-controls-time-remaining-display {
+            color: #34495e;
+            font-size: 14px;
+        }
+    
+        .audio-player:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 10px 30px #19a9f1; /* English blue shadow */
+            opacity: 0.97;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        /* Global button style */
+.styled-button {
+    font-size: 20px; /* Large font size */
+    padding: 15px 30px; /* Increase the size of the button */
+    color: #fff; /* White text */
+    background-color: #3498db; /* Button color */
+    border: none; /* No border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease; /* Smooth transitions */
+}
+
+/* Hover effect */
+.styled-button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+}
+
+/* Button active (click) effect */
+.styled-button:active {
+    background-color: #1f5f85; /* Even darker blue when clicked */
+    transform: translateY(2px); /* Button moves down slightly when clicked */
+}
+
+    
+    </style>
+    
+</head>
+
+<body>
+    <div class="pi-theme">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
+    <h1>Welcome to English Songs</h1>
+
+    <div class="audio-player">
+        <img src="img55.jpg" alt="Album Art">
+        <h2>VEGDIYAN HEERAN</h2>
+        <p><b>Honey Singh & Urvashi</b></p>
+        <div class="audio-controls">
+            <audio controls>
+                <source src="mediaa/m2.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+    
+    
+    
+
+    <div class="audio-player">
+        <img src="img55.jpg" alt="Album Art">
+        <h2>9:45</h2>
+        <p><b>Prabh-ft.Jay Track</b></p>
+        <div class="audio-controls">
+            <audio controls>
+                <source src="mediaa/m1.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+
+    <div class="audio-player">
+        <img src="img55.jpg" alt="Album Art">
+        <h2>PASOORI</h2>
+        <p><b>Ali Sethi x Shae Gill<br>COKE STUDIO</b></p>
+        <div class="audio-controls">
+            <audio controls>
+                <source src="mediaa/m5.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+
+
+
+    <div class="audio-player">
+        <img src="img55.jpg" alt="Album Art">
+        <h2>NO-LOVE</h2>
+        <p><b>Shubh</b></p>
+        <div class="audio-controls">
+            <audio controls>
+                <source src="mediaa/m4.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+    
+
+
+    <br>
+    <br>
+    <br>
+
+
+    <div class="audio-player">
+        <img src="img55.jpg" alt="Album Art">
+        <h2>TU JO MILEYA</h2>
+        <p><b>Juss x MixSingh
+        </b></p>
+        <div class="audio-controls">
+            <audio controls>
+                <source src="mediaa/m3.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+  
+
+</body>
+</html>
